@@ -1,4 +1,4 @@
-ARG SERVICE_NAME=hello-world
+ARG SERVICE_NAME=spring-boot-utils
 
 FROM maven:3.6.3-jdk-11 AS builder
 ARG SERVICE_NAME
@@ -20,4 +20,4 @@ ARG DEPENDENCY=/workdir/${SERVICE_NAME}/target/dependency
 COPY --from=builder ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=builder ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=builder ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","io.codebyexample.helloworld.Application"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","io.codebyexample.springbootutils.Application"]

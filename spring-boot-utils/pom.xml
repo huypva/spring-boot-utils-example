@@ -11,10 +11,9 @@
 	</parent>
 
 	<groupId>io.codebyexample</groupId>
-	<artifactId>hello-world</artifactId>
+	<artifactId>spring-boot-utils</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Hello World</name>
-	<description>Example project for Spring Boot</description>
+	<name>Spring Boot Utils</name>
 
 	<properties>
 		<java.version>1.8</java.version>
